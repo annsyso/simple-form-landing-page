@@ -6,14 +6,18 @@ $main-font: 'Martel', sans-serif;
 
 $font-weights: (
     'light': 300,
-    'reguler': 400,
+    'regular': 400,
     'bold': 700,
-    'black': 900
+    'extra': 900
 );
 
 @function weights($weight) {
     @return map-get($font-weights, $weight);
 };
+
+$two: 2rem;
+$one: 1rem;
+$three: 3rem;
 
 // THEME
 
@@ -43,4 +47,22 @@ $black: #000;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $main-font;
+}
+
+html {
+    font-size: 15px;
+}
+
+*,*:focus,*:hover{
+    outline:none;
+}
+
+// FLEX CENTER
+
+@mixin flexCenter($flex-direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $flex-direction;
 }
