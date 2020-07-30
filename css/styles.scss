@@ -117,12 +117,11 @@ footer {
 
         .fa-stack {
             font-size: 1.2rem;
-        }
 
-        .fab {
-            color: $orange;
+            .fab {
+                color: $orange;
+            }
         }
-
     }
 
     p {
@@ -130,7 +129,4 @@ footer {
         color: $white;
         font-weight: weights(light);
     }
-
-
-
 }
