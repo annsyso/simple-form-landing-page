@@ -137,6 +137,25 @@ header p {
   color: #14213D;
 }
 
+.form-area form .form-control.error input {
+  border: 2px solid #fca311;
+  border-radius: 5px;
+}
+
+.form-area form .form-control.error small {
+  color: #fca311;
+  visibility: visible;
+}
+
+.form-area form .form-control.success input {
+  border: 2px solid #14213D;
+  border-radius: 5px;
+}
+
+.form-area form .form-control.success small {
+  visibility: hidden;
+}
+
 .form-area form .form-control {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,7 +168,7 @@ header p {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  margin-bottom: .8rem;
+  margin-bottom: 5px;
 }
 
 .form-area form .form-control label {
@@ -159,7 +178,6 @@ header p {
 .form-area form .form-control input {
   padding: 5px 0;
   border-radius: 5px;
-  margin-bottom: 10px;
   border: 1px solid #e5e5e5;
   color: #e5e5e5;
 }
@@ -186,10 +204,6 @@ header p {
 
 .form-area form .form-control input:focus {
   border: 1px solid rgba(20, 33, 61, 0.5);
-}
-
-.form-area form .form-control small {
-  color: #fca311;
 }
 
 .form-area form button {
@@ -239,9 +253,6 @@ header p {
   }
   .form-area form {
     padding: 30px 40px;
-  }
-  .form-area form .form-control {
-    padding-bottom: 1rem;
   }
 }
 
@@ -307,8 +318,7 @@ footer p {
 
 @media (max-width: 770px) {
   footer {
-    position: absolute;
-    bottom: 0;
+    margin-top: 3rem;
   }
   footer p {
     color: #fff;

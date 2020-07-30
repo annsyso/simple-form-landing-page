@@ -83,12 +83,34 @@ header {
     form {
         color: $blue;
 
+        .form-control.error {
+            input {
+                border: 2px solid $orange;
+                border-radius: 5px;
+            }
+            small {
+                color: $orange;
+                visibility: visible;
+            }
+        }
+
+        .form-control.success {
+            input {
+                border: 2px solid $blue;
+                border-radius: 5px;
+            }
+
+            small {
+                visibility: hidden;
+            }
+        }
+
         .form-control {
             display: flex;
             flex-direction: column;
             justify-content: center;
             position: relative;
-            margin-bottom: .8rem;
+            margin-bottom: 5px;
 
             label {
                 font-weight: weights(bold);
@@ -97,7 +119,6 @@ header {
             input {
                 padding: 5px 0;
                 border-radius: 5px;
-                margin-bottom: 10px;
                 border: 1px solid $grey;
                 color: $grey;
 
@@ -109,11 +130,6 @@ header {
                 &:focus {
                     border: 1px solid rgba($blue, .5);
                 }
-            }
-
-            small {
-                color: $orange;
-                // visibility: hidden;
             }
         }
 
@@ -150,10 +166,6 @@ header {
 
         form {
             padding: 30px 40px;
-
-            .form-control {
-                padding-bottom: $one;
-            }
         }
     }
 }
@@ -198,8 +210,9 @@ footer {
     }
 
     @include mobile {
-        position: absolute;
-        bottom: 0;
+        margin-top: 3rem;
+        // position: absolute;
+        // bottom: 0;
 
         p {
             color: $white;
