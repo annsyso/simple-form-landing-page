@@ -1,0 +1,46 @@
+// FONTS
+
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@300;400;700;900&display=swap');
+
+$main-font: 'Martel', sans-serif;
+
+$font-weights: (
+    'light': 300,
+    'reguler': 400,
+    'bold': 700,
+    'black': 900
+);
+
+@function weights($weight) {
+    @return map-get($font-weights, $weight);
+};
+
+// THEME
+
+$blue: #14213D;
+$orange: #fca311;
+$grey: #e5e5e5;
+$white: #fff;
+$black: #000;
+
+// DEVICES
+
+@mixin mobile {
+    @media (max-width: 770px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 771px) {
+        @content;
+    }
+}
+
+// RESETS
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
